@@ -4,10 +4,6 @@ services:
     image: moralitos28/dnsmasq:latest
     network_mode: host
     container_name: dnsmasq
-    restart_policy:
-      condition: any
-      delay: 3s
-      max_attempts: 10
-      window: 120s
+    restart: on-failure
     volumes: #Modify personal directory were .conf were located
         - ./config:/etc/dnsmasq.d
