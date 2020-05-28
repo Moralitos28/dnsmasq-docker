@@ -10,4 +10,4 @@ services:
       max_attempts: 10
       window: 120s
     volumes: #Modify personal directory were .conf were located
-        - '.:/config'
+        - ./config:/etc/dnsmasq.d
